@@ -40,7 +40,7 @@ plot <- ggplot(units_by_year, aes(x = Year, y = Units, fill = `Land Use`))+
   theme(
     axis.title.x = element_blank(),
     axis.title.y = element_blank()
-  )
+  )+
   labs(
     title = "Units by Land Use Over Time"
   )
@@ -56,9 +56,9 @@ htmlwidgets::saveWidget(interactive_plot, "visualizations/units-land-use/index.h
 
 
 
-neighborhood_data <- read_csv("UGareaNBG.csv")
+neighborhood_data <- read_csv("visualizations/UGareaNBG.csv")
 
-neighborhood_plot <- plot <- ggplot(neighborhood_data, aes(x = Year, y = Units, fill = `Land Use`))+
+neighborhood_plot <- plot <- ggplot(neighborhood_data, aes(x = NEIGHNAME, y = Units, fill = `Land Use`))+
   geom_col()+
   scale_y_continuous(labels = scales:: comma)+
   theme_minimal()+
