@@ -1,2 +1,2 @@
 # demographics-land-use
-Land Database
+This repository contains supplemental data visualizations and graphics from the Land Database parcel dataset.
