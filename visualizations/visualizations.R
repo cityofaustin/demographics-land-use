@@ -47,8 +47,7 @@ plot <- ggplot(units_by_year, aes(x = Year, y = Units, fill = `Land Use`))+
 
 plot
 
-interactive_plot <- ggplotly(plot)|>
-  layout(hovermode = 'x')
+interactive_plot <- ggplotly(plot)
 
 interactive_plot
 
